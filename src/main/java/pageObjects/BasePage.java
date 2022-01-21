@@ -42,6 +42,10 @@ public class BasePage {
         return element.isDisplayed();
     }
 
+    public String getPageUrl() {
+        return driver.getCurrentUrl();
+    }
+
 
 
 
