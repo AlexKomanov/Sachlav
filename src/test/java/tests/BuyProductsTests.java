@@ -2,10 +2,7 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pageObjects.LoginPage;
-import pageObjects.ProductPage;
-import pageObjects.ProductsPage;
-import pageObjects.YourCartPage;
+import pageObjects.*;
 
 public class BuyProductsTests extends BaseTest{
 
@@ -38,6 +35,18 @@ public class BuyProductsTests extends BaseTest{
         //Your Cart Page
         YourCartPage yourCartPage = new YourCartPage(driver);
         yourCartPage.performCheckout();
+
+        //Checkout
+        CheckOutYourInformationPage checkOutYourInformationPage = new CheckOutYourInformationPage(driver);
+        checkOutYourInformationPage.fillCheckoutForm("Alex", "Komanov", "20100");
+
+        CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(driver);
+        checkoutOverviewPage.finishCheckout();
+
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        Assert.assertEquals(checkoutCompletePage.getThankYouMessage(), "THANK YOU FOR YOUR ORDER");
+        checkoutCompletePage.goBackToProductsPage();
+        Assert.assertEquals(productsPage.getPageUrl(), "https://www.saucedemo.com/inventory.html");
     }
 
     @Test(testName = "Choosing products from the products page")
@@ -55,5 +64,17 @@ public class BuyProductsTests extends BaseTest{
         //Your Cart Page
         YourCartPage yourCartPage = new YourCartPage(driver);
         yourCartPage.performCheckout();
+
+        //Checkout
+        CheckOutYourInformationPage checkOutYourInformationPage = new CheckOutYourInformationPage(driver);
+        checkOutYourInformationPage.fillCheckoutForm("Alex", "Komanov", "20100");
+
+        CheckoutOverviewPage checkoutOverviewPage = new CheckoutOverviewPage(driver);
+        checkoutOverviewPage.finishCheckout();
+
+        CheckoutCompletePage checkoutCompletePage = new CheckoutCompletePage(driver);
+        Assert.assertEquals(checkoutCompletePage.getThankYouMessage(), "THANK YOU FOR YOUR ORDER");
+        checkoutCompletePage.goBackToProductsPage();
+        Assert.assertEquals(productsPage.getPageUrl(), "https://www.saucedemo.com/inventory.html");
     }
 }
