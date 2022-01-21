@@ -2,15 +2,17 @@ package pageObjects;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 public class BasePage {
 
     //Elements
-    WebDriver driver;
+    protected WebDriver driver;
 
     //Constructor
     public BasePage(WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
     //Methods
@@ -40,9 +42,7 @@ public class BasePage {
         return element.isDisplayed();
     }
 
-    public void tearDown(){
-        driver.quit();
-    }
+
 
 
 
