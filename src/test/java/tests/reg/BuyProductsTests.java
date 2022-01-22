@@ -1,11 +1,12 @@
-package tests;
+package tests.reg;
 
 import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.*;
+import tests.BaseTest;
 
-public class BuyProductsTests extends BaseTest{
+public class BuyProductsTests extends BaseTest {
 
     @Test(testName = "Choosing products via product page")
     public void test_01() {

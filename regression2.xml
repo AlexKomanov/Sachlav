@@ -3,7 +3,7 @@
 <suite name="Suite2" verbose="1" >
     <test name="Regression"   >
         <packages>
-            <package name="tests" />
+            <package name="tests.reg" />
         </packages>
     </test>
 </suite>
