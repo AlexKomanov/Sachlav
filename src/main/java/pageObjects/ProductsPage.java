@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class ProductsPage extends BasePage{
+public class ProductsPage extends CommonElements {
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -17,8 +17,6 @@ public class ProductsPage extends BasePage{
 
     @FindBy(css = "[class='inventory_item_name']")
     private List<WebElement> productsTitles;
-    @FindBy(css = "[class='shopping_cart_link']")
-    private WebElement openCartButton;
     @FindBy(css = "[class='title']")
     private WebElement titleOfPage;
     @FindBy(css = "[class='inventory_item']")
@@ -36,9 +34,7 @@ public class ProductsPage extends BasePage{
         }
     }
 
-    public void openCart() {
-        clickElement(openCartButton);
-    }
+
 
     public String getTitle() {
         return getElementText(titleOfPage);

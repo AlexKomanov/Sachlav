@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class BuyProductsTests extends BaseTest{
+public class BuyProductsTests2 extends BaseTest{
 
     @Test(testName = "Choosing products via product page")
     public void test_01() {
