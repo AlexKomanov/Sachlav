@@ -79,6 +79,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>regression2.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
                         <testng.dtd.http>true</testng.dtd.http>
                     </systemPropertyVariables>
