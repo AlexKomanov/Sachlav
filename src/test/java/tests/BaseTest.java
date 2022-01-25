@@ -19,6 +19,7 @@ public abstract class BaseTest {
     protected static ExtentSparkReporter htmlReporter;
     protected static ExtentReports extentReports;
 
+    
     @BeforeClass
     public static void startTest() {
         htmlReporter = new ExtentSparkReporter("reports/extentReport.html");
