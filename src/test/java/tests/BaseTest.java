@@ -18,7 +18,6 @@ public abstract class BaseTest {
     protected static ExtentTest extentTest;
     protected static ExtentSparkReporter htmlReporter;
     protected static ExtentReports extentReports;
-
     
     @BeforeClass
     public static void startTest() {
