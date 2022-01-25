@@ -5,7 +5,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class BuyProductsTests2 extends BaseTest{
+public class BuyProductsTests2 extends BaseTest {
 
     @Test(testName = "Choosing products via product page")
     public void test_01() {
@@ -18,8 +18,7 @@ public class BuyProductsTests2 extends BaseTest{
         try {
             Assert.assertEquals(productsPage.getTitle(), "PRODUCTS", "Wrong page title");
             extentTest.log(Status.PASS, "The title is correct");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             extentTest.log(Status.FAIL, "The title is incorrect");
         }
@@ -60,7 +59,7 @@ public class BuyProductsTests2 extends BaseTest{
     }
 
     @Test(testName = "Choosing products from the products page")
-    public void test_02(){
+    public void test_02() {
         extentTest = extentReports.createTest("Choosing products from the products page");
         LoginPage loginPage = new LoginPage(driver);
         loginPage.login("standard_user", "secret_sauce");
@@ -70,8 +69,7 @@ public class BuyProductsTests2 extends BaseTest{
         try {
             Assert.assertEquals(productsPage.getTitle(), "PRODUCTS", "Wrong page title");
             extentTest.log(Status.PASS, "The title is correct");
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
             extentTest.log(Status.FAIL, "The title is incorrect");
         }
