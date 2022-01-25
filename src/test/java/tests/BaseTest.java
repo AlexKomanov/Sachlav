@@ -14,8 +14,6 @@ import pageObjects.Urls;
 
 public abstract class BaseTest {
 
-
-
     protected WebDriver driver;
     protected static ExtentTest extentTest;
     protected static ExtentSparkReporter htmlReporter;
