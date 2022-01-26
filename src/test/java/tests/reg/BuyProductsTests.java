@@ -1,6 +1,7 @@
 package tests.reg;
 
 import com.aventstack.extentreports.Status;
+import io.qameta.allure.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.*;
@@ -8,6 +9,11 @@ import tests.BaseTest;
 
 public class BuyProductsTests extends BaseTest {
 
+    @Severity(SeverityLevel.BLOCKER)
+    @Description("Verify login with different Credentials")
+    @Epic("E01")
+    @Feature("Feature2: Login")
+    @Story("Story:PRO-45262")
     @Test(testName = "Choosing products via product page")
     public void test_01() {
         extentTest = extentReports.createTest("Choosing products via product page");
